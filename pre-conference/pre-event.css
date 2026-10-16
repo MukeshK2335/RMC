@@ -1,0 +1,67 @@
+.pre-event-page { min-height: 100vh; background: #f1f4f7; }
+.pre-event-main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: clamp(32px, 7vw, 76px) 0; }
+.pre-event-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; color: var(--teal); font-size: 14px; font-weight: 700; }
+.pre-event-back:hover { color: var(--deep-teal); }
+.pre-event-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); align-items: center; gap: clamp(28px, 5vw, 64px); padding: clamp(22px, 5vw, 52px); border: 1px solid #e2e9e6; border-radius: 18px; background: #fff; box-shadow: 0 9px 26px rgba(31, 53, 59, .1); }
+.pre-event-poster { width: 100%; max-height: 720px; border-radius: 10px; background: #f1f4f7; object-fit: contain; }
+.pre-event-details .eyebrow { margin-bottom: 14px; }
+.pre-event-details h1 { margin: 0; color: var(--ink); font-family: var(--font-display); font-size: clamp(30px, 4vw, 48px); font-weight: 800; letter-spacing: -.05em; line-height: 1.15; }
+.pre-event-placeholder { margin: 22px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.pre-event-footer { margin-top: 24px; }
+.pre-event-footer a:focus-visible, .pre-event-back:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.pre-event-report-page { background: #f8faf9; }
+.pre-event-report-hero { position: relative; display: flex; min-height: clamp(520px, 58vw, 720px); align-items: flex-end; overflow: hidden; color: #fff; background: #153c3d; isolation: isolate; }
+.pre-event-report-hero-image, .pre-event-report-hero-shade { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; }
+.pre-event-report-hero-image { object-fit: cover; object-position: center 35%; }
+.pre-event-report-hero-shade { background: linear-gradient(90deg, rgba(7, 37, 39, .9), rgba(7, 37, 39, .53) 65%, rgba(7, 37, 39, .24)), linear-gradient(0deg, rgba(7, 37, 39, .86), transparent 75%); }
+.pre-event-report-hero-content { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 38px 0 clamp(56px, 9vw, 104px); }
+.pre-event-report-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: clamp(56px, 10vw, 120px); color: #fff; font-size: 14px; font-weight: 700; }
+.pre-event-report-back:hover { color: #f2c05a; }
+.pre-event-report-kicker { margin: 0 0 16px; color: #e3d39f; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.pre-event-report-hero h1 { max-width: 900px; margin: 0; color: #fff; font-family: var(--font-display); font-size: clamp(38px, 6.5vw, 76px); font-weight: 800; letter-spacing: -.055em; line-height: 1.06; }
+.pre-event-report-subtitle { margin: 18px 0 0; color: #f3f3ec; font-size: clamp(17px, 2.2vw, 23px); }
+.pre-event-report-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.pre-event-report-meta span { padding: 9px 15px; border: 1px solid #ffffff70; border-radius: 30px; background: #073f4080; font-size: 13px; font-weight: 700; }
+.pre-event-report-main { width: min(1040px, calc(100% - 40px)); margin: 0 auto; padding: clamp(50px, 8vw, 90px) 0; }
+.pre-event-report-section { margin-bottom: 54px; padding: clamp(24px, 4vw, 42px); border: 1px solid #e2e9e6; border-radius: 16px; background: #fff; box-shadow: 0 9px 26px rgba(31, 53, 59, .055); }
+.pre-event-report-section .eyebrow { margin-bottom: 11px; }
+.pre-event-report-section h2, .pre-event-report-gallery-heading h2 { margin: 0 0 19px; color: var(--ink); font-size: clamp(28px, 3.5vw, 38px); letter-spacing: -.045em; line-height: 1.18; }
+.pre-event-report-section p:not(.eyebrow) { margin: 0 0 16px; color: #4e6261; font-size: 16px; line-height: 1.8; }
+.pre-event-report-section p:last-child { margin-bottom: 0; }
+.pre-event-report-introduction { border-top: 4px solid var(--teal); }
+.pre-event-report-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.pre-event-report-list li { position: relative; padding-left: 28px; color: #4e6261; font-size: 15px; line-height: 1.7; }
+.pre-event-report-list li::before { position: absolute; top: .54em; left: 1px; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); content: ""; }
+.pre-event-report-proceedings { display: grid; gap: 15px; }
+.pre-event-report-proceedings p { margin: 0 !important; }
+.pre-event-report-proceedings h3 { margin: 0 0 8px; color: var(--teal); font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: -.025em; line-height: 1.35; }
+.pre-event-report-proceedings article { display: grid; gap: 8px; }
+.pre-event-report-proceedings article .pre-event-report-list { gap: 7px; }
+.pre-event-report-highlights { border-color: #d8e9e2; background: #f2f8f5; }
+.pre-event-report-two-column { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 42px); }
+.pre-event-report-two-column article + article { padding-left: clamp(20px, 3vw, 34px); border-left: 1px solid #e2e9e6; }
+.pre-event-report-gallery-section { padding-top: 8px; }
+.pre-event-report-gallery-heading { margin-bottom: 24px; text-align: center; }
+.pre-event-report-gallery-heading .eyebrow { justify-content: center; }
+.pre-event-report-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.pre-event-report-gallery figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid #e2e9e6; border-radius: 12px; background: #fff; box-shadow: 0 7px 20px rgba(31, 53, 59, .08); }
+.pre-event-report-gallery img { width: 100%; aspect-ratio: 4 / 3; background: #e9efed; object-fit: cover; }
+.pre-event-report-gallery img.pre-event-report-memento { aspect-ratio: 3 / 4; object-fit: contain; }
+.pre-event-report-gallery figcaption { padding: 12px 14px 14px; color: var(--ink); font-size: 13px; font-weight: 700; line-height: 1.5; }
+.pre-event-report-footer { padding-top: 38px; text-align: center; }
+.pre-event-report-back:focus-visible, .pre-event-report-footer a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .pre-event-main { width: min(100% - 28px, 520px); }
+  .pre-event-content { grid-template-columns: 1fr; gap: 26px; padding: 18px; }
+  .pre-event-poster { max-height: 620px; }
+  .pre-event-details { padding: 0 4px 6px; }
+  .pre-event-report-hero { min-height: 570px; }
+  .pre-event-report-hero-content { width: min(100% - 32px, 520px); padding-bottom: 50px; }
+  .pre-event-report-back { margin-bottom: 84px; }
+  .pre-event-report-main { width: min(100% - 28px, 520px); }
+  .pre-event-report-section { margin-bottom: 24px; padding: 22px 19px; }
+  .pre-event-report-two-column { grid-template-columns: 1fr; gap: 24px; }
+  .pre-event-report-two-column article + article { padding: 24px 0 0; border-top: 1px solid #e2e9e6; border-left: 0; }
+  .pre-event-report-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pre-event-report-gallery figcaption { padding: 10px; font-size: 12px; }
+}

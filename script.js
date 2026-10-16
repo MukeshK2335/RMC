@@ -215,7 +215,6 @@ if (announcementCarousel && announcementSlides.length > 1 && !reducedMotion.matc
 const preEventCarousel = document.querySelector(".pre-event-carousel");
 const preEventTrack = document.querySelector(".pre-event-carousel-track");
 const preEventCards = [...document.querySelectorAll(".pre-event-card")];
-const preEventSlideCount = document.querySelector(".pre-event-slide-count");
 let activePreEvent = 0;
 
 function getVisiblePreEventCount() {
@@ -235,7 +234,6 @@ function showPreEvent(index) {
     card.setAttribute("aria-hidden", String(!isVisible));
     card.inert = !isVisible;
   });
-  preEventSlideCount.textContent = `${String(activePreEvent + 1).padStart(2, "0")} / ${String(preEventCards.length).padStart(2, "0")}`;
 }
 
 document.querySelectorAll("[data-pre-event-direction]").forEach((button) => {

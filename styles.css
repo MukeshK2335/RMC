@@ -155,11 +155,24 @@ button { font: inherit; }
 .pre-event-carousel { overflow: hidden; }
 .pre-event-carousel-track { display: flex; gap: 22px; transition: transform .55s ease; }
 .pre-event-card { display: flex; flex: 0 0 calc((100% - 22px) / 2); flex-direction: column; gap: 16px; padding: 12px 12px 18px; border: 1px solid #e2e9e6; border-radius: 16px; background: #fff; box-shadow: 0 9px 26px rgba(31, 53, 59, .1); }
-.pre-event-card > img { width: 100%; height: 230px; border-radius: 10px; object-fit: cover; }
+.pre-event-card > img { width: 100%; height: 420px; border-radius: 10px; object-fit: cover; }
 .pre-event-card > h3 { margin: 0; color: var(--ink); font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: -.035em; line-height: 1.3; text-align: center; }
 .pre-event-card > .button { align-self: center; min-height: 42px; font-size: 13px; }
 .pre-event-card[aria-hidden="true"] { pointer-events: none; }
 .pre-event-card > .button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.rmday-celebration-section { padding: 76px 24px 84px; background: #f5f3ec; }
+.rmday-celebration-heading { width: min(1000px, 100%); margin: 0 auto 32px; text-align: center; }
+.rmday-celebration-eyebrow { margin: 0 0 9px; color: #08777a; font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.rmday-celebration-heading h2 { margin: 0; color: #153c3d; font-family: var(--font-display); font-size: clamp(34px, 4vw, 48px); font-weight: 800; letter-spacing: -.05em; line-height: 1.2; }
+.rmday-celebration-heading > p:last-child { margin: 12px 0 0; color: #61706e; font-size: 15px; line-height: 1.7; }
+.rmday-celebration-carousel { width: min(1000px, 100%); margin: 0 auto; }
+.rmday-celebration-slide { position: relative; display: grid; height: clamp(300px, 29vw, 390px); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 10px; overflow: hidden; border: 1px solid rgba(21, 60, 61, .08); border-radius: 20px; background: #fff; box-shadow: 0 22px 54px rgba(21, 60, 61, .14); }
+.rmday-celebration-image { display: block; width: 100%; height: 100%; min-width: 0; border-radius: 13px; background: #e9eeea; object-fit: cover; }
+.rmday-celebration-arrow { position: absolute; top: 50%; display: grid; width: 48px; height: 48px; place-items: center; padding: 0 0 3px; border: 1px solid rgba(255, 255, 255, .72); border-radius: 50%; color: #fff; background: rgba(21, 60, 61, .78); box-shadow: 0 4px 14px rgba(0, 0, 0, .2); font-size: 32px; font-weight: 400; line-height: 1; cursor: pointer; transform: translateY(-50%); transition: background .2s ease, box-shadow .2s ease, transform .2s ease; backdrop-filter: blur(8px); }
+.rmday-celebration-arrow:hover { background: #08777a; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); transform: translateY(-50%) scale(1.08); }
+.rmday-celebration-arrow:focus-visible { outline: 3px solid #f2a316; outline-offset: 3px; }
+.rmday-celebration-previous { left: 20px; }
+.rmday-celebration-next { right: 20px; }
 .about-rmday { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(42px, 7vw, 92px); background: #fff; }
 .about-rmday-copy { max-width: 600px; }
 .about-rmday-copy h2 { color: var(--teal); font-size: clamp(40px, 4.6vw, 58px); }
@@ -415,7 +428,7 @@ h2 em { color: var(--teal); font-style: normal; }
   .expectations-note { margin-top: 22px; padding: 17px 19px; }
   .pre-event-carousel-track { gap: 18px; }
   .pre-event-card { flex-basis: calc((100% - 18px) / 2); }
-  .pre-event-card > img { height: 205px; }
+  .pre-event-card > img { height: 360px; }
   .pre-event-card > h3 { font-size: 17px; }
   .announcement-card-copy { padding: 18px; }
   .announcement-card-copy h3 { font-size: 28px; }
@@ -542,8 +555,17 @@ h2 em { color: var(--teal); font-style: normal; }
   .announcement-dialog-close { top: 10px; right: 10px; width: 38px; height: 38px; }
   .pre-event-carousel-track { gap: 14px; }
   .pre-event-card { flex-basis: 100%; gap: 13px; padding: 10px 10px 15px; }
-  .pre-event-card > img { height: 190px; }
+  .pre-event-card > img { height: 320px; }
   .pre-event-card > h3 { font-size: 17px; }
+  .rmday-celebration-section { padding: 49px 16px 57px; }
+  .rmday-celebration-heading { margin-bottom: 21px; text-align: left; }
+  .rmday-celebration-heading h2 { font-size: 31px; }
+  .rmday-celebration-heading > p:last-child { font-size: 13px; }
+  .rmday-celebration-slide { height: auto; aspect-ratio: 1.8 / 1; gap: 7px; padding: 6px; border-radius: 14px; }
+  .rmday-celebration-image { border-radius: 9px; }
+  .rmday-celebration-arrow { width: 38px; height: 38px; padding-bottom: 2px; font-size: 27px; }
+  .rmday-celebration-previous { left: 12px; }
+  .rmday-celebration-next { right: 12px; }
   .section-pad { padding: 72px 22px; }
   .intro-section { gap: 41px; }
   .intro-photo { width: calc(100% - 13px); min-height: 345px; }
