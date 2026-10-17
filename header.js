@@ -14,6 +14,7 @@
         <a href="about.html">ABOUT US</a>
         <a href="rmday.html">RMDay</a>
         <a href="career-fair.html">CAREER FAIR</a>
+        <a href="ideathon-pitchfest.html">IDEATHON & PITCHFEST</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="tracks-submenu">
             <span>TRACKS</span>

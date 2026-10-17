@@ -160,132 +160,149 @@ const announcementSlides = [...document.querySelectorAll(".announcement-card")];
 const announcementSlideCount = document.querySelector(".announcement-slide-count");
 const announcementCarousel = document.querySelector(".announcement-carousel");
 const announcementDialog = document.querySelector(".announcement-dialog");
-const announcementDialogImage = announcementDialog.querySelector(".announcement-dialog-image");
-const announcementDialogTitle = announcementDialog.querySelector("#announcement-dialog-title");
-const announcementDialogDescription = announcementDialog.querySelector(".announcement-dialog-description");
-let activeAnnouncement = 0;
+if (announcementDialog) {
+  const announcementDialogImage = announcementDialog.querySelector(".announcement-dialog-image");
+  const announcementDialogTitle = announcementDialog.querySelector("#announcement-dialog-title");
+  const announcementDialogDescription = announcementDialog.querySelector(".announcement-dialog-description");
+  let activeAnnouncement = 0;
 
-function showAnnouncement(index) {
-  activeAnnouncement = (index + announcementSlides.length) % announcementSlides.length;
-  announcementTrack.style.transform = `translateX(-${activeAnnouncement * 100}%)`;
-  announcementSlides.forEach((slide, slideIndex) => {
-    const isActive = slideIndex === activeAnnouncement;
-    slide.setAttribute("aria-hidden", String(!isActive));
-    slide.inert = !isActive;
-  });
-  announcementSlideCount.textContent = `${String(activeAnnouncement + 1).padStart(2, "0")} / ${String(announcementSlides.length).padStart(2, "0")}`;
-}
-
-document.querySelectorAll("[data-announcement-direction]").forEach((button) => {
-  button.addEventListener("click", () => {
-    showAnnouncement(activeAnnouncement + Number(button.dataset.announcementDirection));
-  });
-});
-
-document.querySelectorAll("[data-announcement-open]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const slide = button.closest(".announcement-card");
-    const image = slide.querySelector("img");
-    announcementDialogImage.src = image.src;
-    announcementDialogImage.alt = image.alt;
-    announcementDialogTitle.textContent = slide.querySelector("h3").textContent;
-    announcementDialogDescription.textContent = slide.querySelector(".announcement-card-copy > p:not(.eyebrow)").textContent;
-    announcementDialog.showModal();
-  });
-});
-
-announcementDialog.querySelector(".announcement-dialog-close").addEventListener("click", () => {
-  announcementDialog.close();
-});
-announcementDialog.addEventListener("click", (event) => {
-  if (event.target === announcementDialog) announcementDialog.close();
-});
-
-showAnnouncement(activeAnnouncement);
-
-if (announcementCarousel && announcementSlides.length > 1 && !reducedMotion.matches) {
-  window.setInterval(() => {
-    const isPaused = announcementCarousel.matches(":hover, :focus-within");
-    if (!isPaused && !announcementDialog.open && !document.hidden) {
-      showAnnouncement(activeAnnouncement + 1);
+  function showAnnouncement(index) {
+    if (!announcementTrack || !announcementSlides.length) return;
+    activeAnnouncement = (index + announcementSlides.length) % announcementSlides.length;
+    announcementTrack.style.transform = `translateX(-${activeAnnouncement * 100}%)`;
+    announcementSlides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeAnnouncement;
+      slide.setAttribute("aria-hidden", String(!isActive));
+      slide.inert = !isActive;
+    });
+    if (announcementSlideCount) {
+      announcementSlideCount.textContent = `${String(activeAnnouncement + 1).padStart(2, "0")} / ${String(announcementSlides.length).padStart(2, "0")}`;
     }
-  }, 5_000);
+  }
+
+  document.querySelectorAll("[data-announcement-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showAnnouncement(activeAnnouncement + Number(button.dataset.announcementDirection));
+    });
+  });
+
+  document.querySelectorAll("[data-announcement-open]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const slide = button.closest(".announcement-card");
+      const image = slide.querySelector("img");
+      if (announcementDialogImage) {
+        announcementDialogImage.src = image.src;
+        announcementDialogImage.alt = image.alt;
+      }
+      if (announcementDialogTitle) {
+        announcementDialogTitle.textContent = slide.querySelector("h3").textContent;
+      }
+      if (announcementDialogDescription) {
+        announcementDialogDescription.textContent = slide.querySelector(".announcement-card-copy > p:not(.eyebrow)").textContent;
+      }
+      announcementDialog.showModal();
+    });
+  });
+
+  const closeBtn = announcementDialog.querySelector(".announcement-dialog-close");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      announcementDialog.close();
+    });
+  }
+
+  announcementDialog.addEventListener("click", (event) => {
+    if (event.target === announcementDialog) announcementDialog.close();
+  });
+
+  showAnnouncement(activeAnnouncement);
+
+  if (announcementCarousel && announcementSlides.length > 1 && !reducedMotion.matches) {
+    window.setInterval(() => {
+      const isPaused = announcementCarousel.matches(":hover, :focus-within");
+      if (!isPaused && !announcementDialog.open && !document.hidden) {
+        showAnnouncement(activeAnnouncement + 1);
+      }
+    }, 5_000);
+  }
 }
 
 const preEventCarousel = document.querySelector(".pre-event-carousel");
 const preEventTrack = document.querySelector(".pre-event-carousel-track");
 const preEventCards = [...document.querySelectorAll(".pre-event-card")];
-let activePreEvent = 0;
+if (preEventCarousel && preEventTrack && preEventCards.length) {
+  let activePreEvent = 0;
 
-function getVisiblePreEventCount() {
-  if (preEventCards.length < 2) return preEventCards.length;
-  const step = preEventCards[1].offsetLeft - preEventCards[0].offsetLeft;
-  return step > 0 ? Math.max(1, Math.round(preEventCarousel.clientWidth / step)) : 1;
-}
+  function getVisiblePreEventCount() {
+    if (preEventCards.length < 2) return preEventCards.length;
+    const step = preEventCards[1].offsetLeft - preEventCards[0].offsetLeft;
+    return step > 0 ? Math.max(1, Math.round(preEventCarousel.clientWidth / step)) : 1;
+  }
 
-function showPreEvent(index) {
-  if (!preEventCards.length) return;
-  const maxIndex = Math.max(0, preEventCards.length - getVisiblePreEventCount());
-  activePreEvent = (index + maxIndex + 1) % (maxIndex + 1);
-  preEventTrack.style.transform = `translateX(-${preEventCards[activePreEvent].offsetLeft - preEventCards[0].offsetLeft}px)`;
-  const visibleCount = getVisiblePreEventCount();
-  preEventCards.forEach((card, cardIndex) => {
-    const isVisible = cardIndex >= activePreEvent && cardIndex < activePreEvent + visibleCount;
-    card.setAttribute("aria-hidden", String(!isVisible));
-    card.inert = !isVisible;
+  function showPreEvent(index) {
+    const maxIndex = Math.max(0, preEventCards.length - getVisiblePreEventCount());
+    activePreEvent = (index + maxIndex + 1) % (maxIndex + 1);
+    preEventTrack.style.transform = `translateX(-${preEventCards[activePreEvent].offsetLeft - preEventCards[0].offsetLeft}px)`;
+    const visibleCount = getVisiblePreEventCount();
+    preEventCards.forEach((card, cardIndex) => {
+      const isVisible = cardIndex >= activePreEvent && cardIndex < activePreEvent + visibleCount;
+      card.setAttribute("aria-hidden", String(!isVisible));
+      card.inert = !isVisible;
+    });
+  }
+
+  document.querySelectorAll("[data-pre-event-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showPreEvent(activePreEvent + Number(button.dataset.preEventDirection));
+    });
   });
-}
 
-document.querySelectorAll("[data-pre-event-direction]").forEach((button) => {
-  button.addEventListener("click", () => {
-    showPreEvent(activePreEvent + Number(button.dataset.preEventDirection));
-  });
-});
+  showPreEvent(activePreEvent);
+  window.addEventListener("resize", () => showPreEvent(activePreEvent));
 
-showPreEvent(activePreEvent);
-window.addEventListener("resize", () => showPreEvent(activePreEvent));
-
-if (preEventCarousel && preEventCards.length > 1 && !reducedMotion.matches) {
-  window.setInterval(() => {
-    if (!preEventCarousel.matches(":hover, :focus-within") && !document.hidden) {
-      showPreEvent(activePreEvent + 1);
-    }
-  }, 5_000);
+  if (preEventCards.length > 1 && !reducedMotion.matches) {
+    window.setInterval(() => {
+      if (!preEventCarousel.matches(":hover, :focus-within") && !document.hidden) {
+        showPreEvent(activePreEvent + 1);
+      }
+    }, 5_000);
+  }
 }
 
 const testimonialCarousel = document.querySelector(".testimonial-carousel");
 const testimonialTrack = document.querySelector(".testimonial-carousel-track");
 const testimonialSlides = [...document.querySelectorAll(".testimonial-card")];
-let activeTestimonial = 0;
+if (testimonialCarousel && testimonialTrack && testimonialSlides.length) {
+  let activeTestimonial = 0;
 
-function showTestimonial(index) {
-  if (!testimonialSlides.length) return;
-  const visibleCount = Math.min(2, testimonialSlides.length);
-  const pageCount = Math.ceil(testimonialSlides.length / visibleCount);
-  const page = ((Math.floor(index / visibleCount) % pageCount) + pageCount) % pageCount;
-  activeTestimonial = page * visibleCount;
-  testimonialTrack.style.transform = `translateX(-${testimonialSlides[activeTestimonial].offsetLeft - testimonialSlides[0].offsetLeft}px)`;
-  testimonialSlides.forEach((slide, slideIndex) => {
-    const isActive = slideIndex >= activeTestimonial && slideIndex < activeTestimonial + visibleCount;
-    slide.setAttribute("aria-hidden", String(!isActive));
-    slide.inert = !isActive;
+  function showTestimonial(index) {
+    const visibleCount = Math.min(2, testimonialSlides.length);
+    const pageCount = Math.ceil(testimonialSlides.length / visibleCount);
+    const page = ((Math.floor(index / visibleCount) % pageCount) + pageCount) % pageCount;
+    activeTestimonial = page * visibleCount;
+    testimonialTrack.style.transform = `translateX(-${testimonialSlides[activeTestimonial].offsetLeft - testimonialSlides[0].offsetLeft}px)`;
+    testimonialSlides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex >= activeTestimonial && slideIndex < activeTestimonial + visibleCount;
+      slide.setAttribute("aria-hidden", String(!isActive));
+      slide.inert = !isActive;
+    });
+  }
+
+  document.querySelectorAll("[data-testimonial-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showTestimonial(activeTestimonial + Number(button.dataset.testimonialDirection) * 2);
+    });
   });
-}
 
-document.querySelectorAll("[data-testimonial-direction]").forEach((button) => {
-  button.addEventListener("click", () => {
-    showTestimonial(activeTestimonial + Number(button.dataset.testimonialDirection) * 2);
-  });
-});
+  showTestimonial(activeTestimonial);
 
-showTestimonial(activeTestimonial);
-
-if (testimonialCarousel && testimonialSlides.length > 1 && !reducedMotion.matches) {
-  window.setInterval(() => {
-    if (!testimonialCarousel.matches(":hover, :focus-within") && !document.hidden) {
-      showTestimonial(activeTestimonial + 2);
-    }
-  }, 6_000);
+  if (testimonialSlides.length > 1 && !reducedMotion.matches) {
+    window.setInterval(() => {
+      if (!testimonialCarousel.matches(":hover, :focus-within") && !document.hidden) {
+        showTestimonial(activeTestimonial + 2);
+      }
+    }, 6_000);
+  }
 }
 
 const contactForm = document.querySelector(".contact-form");
@@ -306,11 +323,13 @@ function updateCountdown() {
   const minutes = Math.floor((remaining % 3_600_000) / 60_000);
   const seconds = Math.floor((remaining % 60_000) / 1_000);
 
-  countdownNodes.days.textContent = String(days).padStart(2, "0");
-  countdownNodes.hours.textContent = String(hours).padStart(2, "0");
-  countdownNodes.minutes.textContent = String(minutes).padStart(2, "0");
-  countdownNodes.seconds.textContent = String(seconds).padStart(2, "0");
+  if (countdownNodes.days) countdownNodes.days.textContent = String(days).padStart(2, "0");
+  if (countdownNodes.hours) countdownNodes.hours.textContent = String(hours).padStart(2, "0");
+  if (countdownNodes.minutes) countdownNodes.minutes.textContent = String(minutes).padStart(2, "0");
+  if (countdownNodes.seconds) countdownNodes.seconds.textContent = String(seconds).padStart(2, "0");
 }
 
-updateCountdown();
-window.setInterval(updateCountdown, 1_000);
+if (countdownNodes.days) {
+  updateCountdown();
+  window.setInterval(updateCountdown, 1_000);
+}
