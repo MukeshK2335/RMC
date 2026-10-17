@@ -26,7 +26,7 @@
           </div>
         </div>
         <a href="gallery.html">GALLERY</a>
-        <a href="award.html">AWARDS</a>
+        <a href="awards.html">AWARDS</a>
       </nav>
     </header>
   `;
