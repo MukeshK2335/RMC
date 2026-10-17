@@ -1,0 +1,1982 @@
+.health-wellbeing-page {
+  min-height: 100vh;
+  background: #fbfaf7;
+}
+
+.health-wellbeing-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(320px, 28vw, 430px);
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 48px 24px;
+  color: #fff;
+  background: #263025 url("images/HW.webp") center 51% / cover no-repeat;
+}
+
+.health-wellbeing-hero-shade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(0, 0, 0, .58);
+}
+
+.health-wellbeing-hero-content {
+  width: min(1200px, 100%);
+  text-align: center;
+}
+
+.health-wellbeing-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.2vw, 72px);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-hero p {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: clamp(17px, 1.45vw, 26px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.4;
+}
+
+.health-wellbeing-about {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 112px) 24px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 88% 12%, rgba(106, 186, 145, .2), transparent 31%),
+    radial-gradient(ellipse at 4% 100%, rgba(3, 48, 58, .52), transparent 43%),
+    #086568;
+}
+
+.health-wellbeing-about::before,
+.health-wellbeing-about::after {
+  position: absolute;
+  border: 1px solid rgba(228, 203, 143, .22);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.health-wellbeing-about::before {
+  top: -190px;
+  right: -100px;
+  width: 470px;
+  height: 470px;
+}
+
+.health-wellbeing-about::after {
+  top: -155px;
+  right: -65px;
+  width: 400px;
+  height: 400px;
+}
+
+.health-wellbeing-about-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(1300px, 100%);
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .82fr);
+  align-items: center;
+  gap: clamp(52px, 8vw, 112px);
+  margin: 0 auto;
+}
+
+.health-wellbeing-about-copy {
+  max-width: 730px;
+}
+
+.health-wellbeing-about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 23px;
+  color: #e7d39d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+
+.health-wellbeing-about-eyebrow span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(231, 211, 157, .6);
+  border-radius: 50%;
+  font-size: 10px;
+  letter-spacing: .04em;
+}
+
+.health-wellbeing-about-copy h2 {
+  max-width: 620px;
+  margin: 0 0 26px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.health-wellbeing-about-copy h2 em {
+  color: #e7d39d;
+  font-style: normal;
+}
+
+.health-wellbeing-about-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, .96);
+  font-size: clamp(16px, 1.05vw, 18px);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.health-wellbeing-about-copy p + p {
+  margin-top: 20px;
+}
+
+.health-wellbeing-about-copy strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.health-wellbeing-about-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 27px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.health-wellbeing-about-pillars li {
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.health-wellbeing-about-visual {
+  position: relative;
+  margin: 0;
+  padding: 0 0 18px 18px;
+}
+
+.health-wellbeing-about-visual::before {
+  position: absolute;
+  inset: 22px 18px 39px 0;
+  border: 1px solid rgba(231, 211, 157, .68);
+  border-radius: 18px 80px 18px 18px;
+  content: "";
+  transform: rotate(-3deg);
+}
+
+.health-wellbeing-about-image-frame {
+  position: relative;
+  z-index: 1;
+  height: clamp(360px, 34vw, 440px);
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, .88);
+  border-radius: 18px 80px 18px 18px;
+  background: #477b61;
+  box-shadow: 0 26px 60px rgba(0, 34, 39, .34);
+}
+
+.health-wellbeing-about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.health-wellbeing-about-image-note {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  padding: 11px 15px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 999px;
+  color: #174c45;
+  background: rgba(255, 255, 255, .92);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.health-wellbeing-about-visual figcaption {
+  position: relative;
+  z-index: 1;
+  margin: 17px 0 0 12px;
+  color: rgba(255, 255, 255, .83);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.health-wellbeing-overview {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(74px, 8vw, 112px) 24px;
+  background:
+    radial-gradient(ellipse at 8% 18%, rgba(8, 119, 122, .08), transparent 28%),
+    #fbfaf7;
+}
+
+.health-wellbeing-overview-inner {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-overview-heading {
+  max-width: 800px;
+  margin: 0 auto clamp(42px, 5vw, 64px);
+  text-align: center;
+}
+
+.health-wellbeing-overview-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #08777a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-overview-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #e0a52f;
+}
+
+.health-wellbeing-overview-heading h2 {
+  margin: 0;
+  color: #173d3e;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.3vw, 56px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-overview-heading h2 em {
+  color: #08777a;
+  font-style: normal;
+}
+
+.health-wellbeing-overview-heading > p:last-child {
+  margin: 15px 0 0;
+  color: #5d6c69;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-overview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(380px, .94fr);
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.health-wellbeing-benefits {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: benefits;
+}
+
+.health-wellbeing-benefits li {
+  display: grid;
+  min-height: 76px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 17px;
+  padding: 14px 19px;
+  border: 1px solid #e3eae5;
+  border-radius: 14px;
+  color: #344a4c;
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 7px 20px rgba(28, 65, 61, .035);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.55;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.health-wellbeing-benefits li:hover {
+  transform: translateX(5px);
+  border-color: rgba(8, 119, 122, .4);
+  box-shadow: 0 12px 25px rgba(28, 65, 61, .09);
+}
+
+.health-wellbeing-benefit-number {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 50%;
+  color: #08777a;
+  background: #e7f2ed;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.health-wellbeing-benefits li:nth-child(even) .health-wellbeing-benefit-number {
+  color: #8b661f;
+  background: #f5efdF;
+}
+
+.health-wellbeing-overview-art {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 36% 18px 36% 18px;
+  isolation: isolate;
+  background: #fff;
+  box-shadow: 0 24px 55px rgba(19, 67, 66, .18);
+}
+
+.health-wellbeing-overview-art::before {
+  position: absolute;
+  z-index: -1;
+  inset: 20px;
+  border: 1px solid rgba(8, 119, 122, .2);
+  border-radius: 36% 18px 36% 18px;
+  content: "";
+}
+
+.health-wellbeing-art-orbit {
+  position: absolute;
+  z-index: -1;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(8, 119, 122, .14);
+  border-radius: 50%;
+}
+
+.health-wellbeing-art-orbit-one {
+  transform: scale(1.22);
+}
+
+.health-wellbeing-art-orbit-two {
+  transform: scale(.86);
+}
+
+.health-wellbeing-art-spark {
+  position: absolute;
+  color: #c28a1c;
+  line-height: 1;
+}
+
+.health-wellbeing-art-spark-one {
+  top: 16%;
+  left: 19%;
+  font-size: 32px;
+}
+
+.health-wellbeing-art-spark-two {
+  top: 28%;
+  right: 15%;
+  font-size: 24px;
+}
+
+.health-wellbeing-family-art {
+  width: min(78%, 380px);
+  margin-top: -18px;
+  object-fit: contain;
+}
+
+.health-wellbeing-art-caption {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px;
+  border: 1px solid rgba(255, 255, 255, .42);
+  border-radius: 16px;
+  color: #244748;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 10px 25px rgba(0, 30, 34, .17);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.health-wellbeing-art-heart {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  color: #08777a;
+  background: #e7f2ed;
+  font-size: 23px;
+}
+
+.health-wellbeing-importance {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 112px) 24px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(66, 153, 139, .3), transparent 31%),
+    radial-gradient(ellipse at 94% 92%, rgba(211, 172, 94, .15), transparent 34%),
+    linear-gradient(135deg, #103f46, #0b5b5d 58%, #16474c);
+}
+
+.health-wellbeing-importance::before,
+.health-wellbeing-importance::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.health-wellbeing-importance::before {
+  top: -300px;
+  right: -140px;
+  width: 720px;
+  height: 720px;
+}
+
+.health-wellbeing-importance::after {
+  bottom: -410px;
+  left: -240px;
+  width: 800px;
+  height: 800px;
+}
+
+.health-wellbeing-importance-inner {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-importance-heading {
+  max-width: 780px;
+  margin: 0 auto clamp(38px, 5vw, 58px);
+  text-align: center;
+}
+
+.health-wellbeing-importance-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #f0d995;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-importance-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #f0d995;
+}
+
+.health-wellbeing-importance-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-importance-heading h2 em {
+  color: #f0d995;
+  font-style: normal;
+}
+
+.health-wellbeing-importance-heading > p:last-child {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, .76);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-importance-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.health-wellbeing-importance-card {
+  position: relative;
+  min-height: 235px;
+  grid-column: span 2;
+  overflow: hidden;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: 20px 20px 20px 5px;
+  background: linear-gradient(145deg, #fffefa, #f1f5ef);
+  box-shadow: 0 16px 36px rgba(2, 27, 31, .18);
+  transition: transform .22s ease, border-radius .22s ease, box-shadow .22s ease;
+}
+
+.health-wellbeing-importance-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0c8580, #d1aa53);
+  content: "";
+}
+
+.health-wellbeing-importance-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.health-wellbeing-importance-card:hover {
+  transform: translateY(-7px);
+  border-radius: 20px 20px 5px 20px;
+  box-shadow: 0 23px 42px rgba(2, 27, 31, .25);
+}
+
+.health-wellbeing-importance-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #dce9e1;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.health-wellbeing-importance-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid #cfe4dc;
+  border-radius: 17px 17px 17px 5px;
+  color: #08777a;
+  background: linear-gradient(145deg, #e9f4ed, #dcefe8);
+}
+
+.health-wellbeing-importance-card:nth-child(even) .health-wellbeing-importance-icon {
+  border-color: #f0e4c8;
+  color: #98721e;
+  background: linear-gradient(145deg, #fbf4e5, #f4e9cd);
+}
+
+.health-wellbeing-importance-icon svg {
+  width: 29px;
+  height: 29px;
+}
+
+.health-wellbeing-importance-card h3 {
+  margin: 21px 0 8px;
+  color: #173d3e;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 21px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.25;
+}
+
+.health-wellbeing-importance-card p {
+  margin: 0;
+  color: #586968;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.health-wellbeing-learning {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 112px) 24px;
+  background: #fff;
+}
+
+.health-wellbeing-learning::before {
+  position: absolute;
+  top: -145px;
+  right: -110px;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(8, 119, 122, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(8, 119, 122, .035), 0 0 0 70px rgba(8, 119, 122, .025);
+  content: "";
+}
+
+.health-wellbeing-learning-inner {
+  position: relative;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-learning-heading {
+  max-width: 760px;
+  margin: 0 auto clamp(38px, 5vw, 58px);
+  text-align: center;
+}
+
+.health-wellbeing-learning-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #08777a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-learning-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #d5a63f;
+}
+
+.health-wellbeing-learning-heading h2 {
+  margin: 0;
+  color: #173d3e;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-learning-heading h2 em {
+  color: #08777a;
+  font-style: normal;
+}
+
+.health-wellbeing-learning-heading > p:last-child {
+  margin: 15px 0 0;
+  color: #5d6c69;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.health-wellbeing-learning-card {
+  position: relative;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid #cfe4dc;
+  border-radius: 22px 22px 22px 6px;
+  background: #e6f5f0;
+  box-shadow: 0 14px 32px rgba(22, 78, 68, .075);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.health-wellbeing-learning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 38px rgba(22, 78, 68, .14);
+}
+
+.health-wellbeing-learning-card-featured {
+  border-color: #6bc4a8;
+  background: #d5f1e9;
+}
+
+.health-wellbeing-learning-card-wide {
+  width: min(690px, 100%);
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: linear-gradient(135deg, #e2f3ed, #f3f6e9);
+}
+
+.health-wellbeing-learning-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.health-wellbeing-learning-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #128775;
+  box-shadow: 0 7px 16px rgba(13, 104, 89, .18);
+}
+
+.health-wellbeing-learning-card:nth-child(2) .health-wellbeing-learning-icon {
+  background: #23a482;
+}
+
+.health-wellbeing-learning-card-wide .health-wellbeing-learning-icon {
+  background: #927331;
+}
+
+.health-wellbeing-learning-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.health-wellbeing-learning-index {
+  color: #438478;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.health-wellbeing-learning-card h3 {
+  margin: 0 0 15px;
+  color: #174e48;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.75vw, 23px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+
+.health-wellbeing-learning-card ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.health-wellbeing-learning-card li {
+  position: relative;
+  padding-left: 19px;
+  color: #28746a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.health-wellbeing-learning-card li::before {
+  position: absolute;
+  top: .68em;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #159479;
+  content: "";
+}
+
+.health-wellbeing-expect {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 8vw, 112px) 24px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(66, 153, 139, .3), transparent 31%),
+    radial-gradient(ellipse at 94% 92%, rgba(211, 172, 94, .15), transparent 34%),
+    linear-gradient(135deg, #103f46, #0b5b5d 58%, #16474c);
+}
+
+.health-wellbeing-expect::before,
+.health-wellbeing-expect::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.health-wellbeing-expect::before {
+  top: -285px;
+  left: -170px;
+  width: 600px;
+  height: 600px;
+}
+
+.health-wellbeing-expect::after {
+  right: -240px;
+  bottom: -350px;
+  width: 700px;
+  height: 700px;
+}
+
+.health-wellbeing-expect-inner {
+  position: relative;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-expect-heading {
+  max-width: 780px;
+  margin: 0 auto clamp(42px, 5vw, 62px);
+  text-align: center;
+}
+
+.health-wellbeing-expect-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #f0d995;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-expect-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #f0d995;
+}
+
+.health-wellbeing-expect-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-expect-heading h2 em {
+  color: #f0d995;
+  font-style: normal;
+}
+
+.health-wellbeing-expect-heading > p:last-child {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, .76);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-expect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.health-wellbeing-expect-card {
+  position: relative;
+  min-width: 0;
+  min-height: 235px;
+  overflow: hidden;
+  padding: 27px 26px 30px;
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 20px 20px 20px 5px;
+  background: linear-gradient(150deg, #fff, #f7fbf7);
+  box-shadow: 0 14px 32px rgba(25, 79, 58, .1);
+  transition: transform .22s ease, box-shadow .22s ease, border-radius .22s ease;
+}
+
+.health-wellbeing-expect-card:hover {
+  transform: translateY(-6px);
+  border-radius: 20px 20px 5px 20px;
+  box-shadow: 0 21px 38px rgba(25, 79, 58, .18);
+}
+
+.health-wellbeing-expect-index {
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  color: rgba(8, 119, 96, .2);
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.health-wellbeing-expect-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  border: 1px solid rgba(8, 119, 122, .13);
+  border-radius: 16px 16px 16px 5px;
+  color: #08777a;
+  background: #e0eee2;
+}
+
+.health-wellbeing-expect-card:nth-child(3n + 2) .health-wellbeing-expect-icon {
+  color: #98721e;
+  background: #f5efdF;
+}
+
+.health-wellbeing-expect-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.health-wellbeing-expect-card h3 {
+  margin: 20px 0 9px;
+  color: #214947;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 21px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+
+.health-wellbeing-expect-card p {
+  max-width: 340px;
+  margin: 0;
+  color: #5b635b;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.health-wellbeing-expect-rule {
+  position: absolute;
+  right: 26px;
+  bottom: 0;
+  left: 26px;
+  height: 3px;
+  background: linear-gradient(90deg, #08777a, #8fbe8b 65%, transparent);
+  opacity: .65;
+}
+
+.health-wellbeing-audience {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 8vw, 112px) 24px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(8, 119, 122, .1), transparent 34%),
+    #f4f8f4;
+}
+
+.health-wellbeing-audience::before {
+  position: absolute;
+  top: -210px;
+  left: -150px;
+  width: 440px;
+  height: 440px;
+  border: 1px solid rgba(8, 119, 122, .1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(8, 119, 122, .035), 0 0 0 68px rgba(8, 119, 122, .025);
+  content: "";
+}
+
+.health-wellbeing-audience-inner {
+  position: relative;
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-audience-heading {
+  max-width: 790px;
+  margin: 0 auto clamp(42px, 5vw, 62px);
+  text-align: center;
+}
+
+.health-wellbeing-audience-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #08777a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-audience-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #d5a63f;
+}
+
+.health-wellbeing-audience-heading h2 {
+  margin: 0;
+  color: #173d3e;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-audience-heading h2 em {
+  color: #08777a;
+  font-style: normal;
+}
+
+.health-wellbeing-audience-heading > p:last-child {
+  margin: 15px 0 0;
+  color: #5d6c69;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-audience-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.65fr);
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.health-wellbeing-audience-note {
+  position: sticky;
+  top: 130px;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-self: start;
+  padding: 32px;
+  border-radius: 28px 28px 28px 6px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 82% 15%, rgba(114, 193, 156, .34), transparent 35%),
+    linear-gradient(145deg, #0e7775, #114e58);
+  box-shadow: 0 20px 42px rgba(16, 76, 73, .18);
+}
+
+.health-wellbeing-audience-note-mark {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: rgba(255, 255, 255, .24);
+  font-family: Georgia, serif;
+  font-size: 112px;
+  line-height: 1;
+}
+
+.health-wellbeing-audience-note p {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.5;
+}
+
+.health-wellbeing-audience-note-caption {
+  display: block;
+  margin-top: 24px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, .32);
+  color: #efda9d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-audience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.health-wellbeing-audience-list li {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 112px;
+  grid-template-columns: 32px 44px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #dce9e2;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 8px 22px rgba(23, 61, 62, .045);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.health-wellbeing-audience-list li:hover {
+  transform: translateY(-3px);
+  border-color: rgba(8, 119, 122, .36);
+  box-shadow: 0 14px 28px rgba(23, 61, 62, .1);
+}
+
+.health-wellbeing-audience-number {
+  color: #91aaa0;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.health-wellbeing-audience-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px 14px 14px 4px;
+  color: #08777a;
+  background: #e5f1eb;
+}
+
+.health-wellbeing-audience-list li:nth-child(even) .health-wellbeing-audience-icon {
+  color: #98721e;
+  background: #f5efdF;
+}
+
+.health-wellbeing-audience-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.health-wellbeing-audience-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.health-wellbeing-audience-copy strong {
+  color: #214947;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.health-wellbeing-audience-copy > span {
+  color: #63716c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.health-wellbeing-audience-arrow {
+  align-self: start;
+  color: #88aaa0;
+  font-size: 16px;
+}
+
+.health-wellbeing-join {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(76px, 8vw, 112px) 24px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(66, 153, 139, .3), transparent 31%),
+    radial-gradient(ellipse at 94% 92%, rgba(211, 172, 94, .15), transparent 34%),
+    linear-gradient(135deg, #103f46, #0b5b5d 58%, #16474c);
+}
+
+.health-wellbeing-join::before,
+.health-wellbeing-join::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.health-wellbeing-join::before {
+  top: -285px;
+  left: -170px;
+  width: 600px;
+  height: 600px;
+}
+
+.health-wellbeing-join::after {
+  right: -240px;
+  bottom: -350px;
+  width: 700px;
+  height: 700px;
+}
+
+.health-wellbeing-join-inner {
+  position: relative;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-join-heading {
+  max-width: 780px;
+  margin: 0 auto clamp(42px, 5vw, 62px);
+  text-align: center;
+}
+
+.health-wellbeing-join-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #f0d995;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-join-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #f0d995;
+}
+
+.health-wellbeing-join-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-join-heading h2 em {
+  color: #f0d995;
+  font-style: normal;
+}
+
+.health-wellbeing-join-heading > p:last-child {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, .76);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+}
+
+.health-wellbeing-join-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.health-wellbeing-join-card {
+  position: relative;
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 22px 24px 27px;
+  border: 1px solid #dce9e2;
+  border-radius: 20px 20px 20px 5px;
+  background: linear-gradient(145deg, #f3f9f5, #e9f4ee);
+  box-shadow: 0 12px 28px rgba(23, 61, 62, .065);
+  transition: transform .22s ease, border-radius .22s ease, box-shadow .22s ease;
+}
+
+.health-wellbeing-join-card:nth-child(even) {
+  background: linear-gradient(145deg, #fbf8ed, #f5f0df);
+}
+
+.health-wellbeing-join-card::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0c8580, #d1aa53);
+  content: "";
+  opacity: .75;
+}
+
+.health-wellbeing-join-card:hover {
+  transform: translateY(-6px);
+  border-radius: 20px 20px 5px 20px;
+  box-shadow: 0 20px 36px rgba(23, 61, 62, .13);
+}
+
+.health-wellbeing-join-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.health-wellbeing-join-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(8, 119, 122, .13);
+  border-radius: 16px 16px 16px 5px;
+  color: #08777a;
+  background: #dcefe7;
+}
+
+.health-wellbeing-join-card:nth-child(even) .health-wellbeing-join-icon {
+  border-color: rgba(152, 114, 30, .16);
+  color: #98721e;
+  background: #f1e6c9;
+}
+
+.health-wellbeing-join-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.health-wellbeing-join-number {
+  color: #b7cec2;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.health-wellbeing-join-card p {
+  max-width: 330px;
+  margin: 25px 0 0;
+  color: #214947;
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.45;
+}
+
+.health-wellbeing-join-card.health-wellbeing-join-card-featured {
+  border-color: #9ec9b9;
+  background: linear-gradient(145deg, #e7f3ec, #d7eae0);
+}
+
+.health-wellbeing-join-card-featured .health-wellbeing-join-icon {
+  border-color: #cfe4dc;
+  color: #08777a;
+  background: #dcefe7;
+}
+
+.health-wellbeing-join-card-featured .health-wellbeing-join-number {
+  color: #91aaa0;
+}
+
+.health-wellbeing-join-card-featured p {
+  color: #214947;
+}
+
+.health-wellbeing-confidence {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 108px) 24px;
+  background:
+    radial-gradient(ellipse at 88% 5%, rgba(8, 119, 122, .09), transparent 32%),
+    #f4f8f7;
+}
+
+.health-wellbeing-confidence::before {
+  position: absolute;
+  top: -210px;
+  left: -180px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(8, 119, 122, .11);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(8, 119, 122, .025), 0 0 0 70px rgba(8, 119, 122, .018);
+  content: "";
+}
+
+.health-wellbeing-confidence-inner {
+  position: relative;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.health-wellbeing-confidence-heading {
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.health-wellbeing-confidence-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 15px;
+  color: #08777a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.health-wellbeing-confidence-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #d5a63f;
+}
+
+.health-wellbeing-confidence-heading h2 {
+  margin: 0;
+  color: #173d3e;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.3vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.health-wellbeing-confidence-heading h2 em {
+  color: #08777a;
+  font-style: normal;
+}
+
+.health-wellbeing-confidence-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(34px, 5vw, 58px) clamp(26px, 5vw, 66px) 30px;
+  border: 1px solid #d8e9e4;
+  border-radius: 26px 26px 26px 7px;
+  background:
+    radial-gradient(circle at 98% 0%, rgba(133, 199, 178, .18), transparent 35%),
+    linear-gradient(135deg, #eaf5f4, #e8f1fb);
+  box-shadow: 0 22px 48px rgba(23, 61, 62, .09);
+}
+
+.health-wellbeing-confidence-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, #0b9990, #d5ad53);
+  content: "";
+}
+
+.health-wellbeing-confidence-mark {
+  position: absolute;
+  top: -8px;
+  right: 36px;
+  color: rgba(8, 119, 122, .1);
+  font-family: Georgia, serif;
+  font-size: 190px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.health-wellbeing-confidence-quotes {
+  position: relative;
+  display: grid;
+  gap: 26px;
+}
+
+.health-wellbeing-confidence-quotes blockquote {
+  display: grid;
+  grid-template-columns: 5px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+  margin: 0;
+}
+
+.health-wellbeing-confidence-line {
+  width: 4px;
+  min-height: 100%;
+  border-radius: 999px;
+  background: #40a99c;
+}
+
+.health-wellbeing-confidence-quotes blockquote + blockquote .health-wellbeing-confidence-line {
+  background: #d3ad58;
+}
+
+.health-wellbeing-confidence-quotes p {
+  max-width: 930px;
+  margin: 0;
+  color: #3e5151;
+  font-size: clamp(17px, 1.45vw, 20px);
+  line-height: 1.8;
+}
+
+.health-wellbeing-confidence-signoff {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 0 27px;
+  color: #08777a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.health-wellbeing-confidence-signoff span {
+  width: 22px;
+  height: 1px;
+  background: #d5a63f;
+}
+
+@media (max-width: 850px) {
+  .health-wellbeing-about-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .82fr);
+    gap: 34px;
+  }
+
+  .health-wellbeing-about-visual {
+    padding-left: 10px;
+  }
+
+  .health-wellbeing-about-image-frame {
+    height: 380px;
+    border-top-right-radius: 60px;
+  }
+
+  .health-wellbeing-overview-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .85fr);
+    gap: 25px;
+  }
+
+  .health-wellbeing-overview-art {
+    min-height: 440px;
+  }
+
+  .health-wellbeing-importance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .health-wellbeing-importance-card,
+  .health-wellbeing-importance-card:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .health-wellbeing-importance-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .health-wellbeing-learning-grid {
+    gap: 14px;
+  }
+
+  .health-wellbeing-expect-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .health-wellbeing-audience-layout {
+    grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr);
+    gap: 22px;
+  }
+
+  .health-wellbeing-audience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .health-wellbeing-join-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .health-wellbeing-confidence-quotes p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .health-wellbeing-hero {
+    min-height: 330px;
+    padding: 40px 20px;
+    background-position: 52% center;
+  }
+
+  .health-wellbeing-about {
+    padding: 64px 20px;
+  }
+
+  .health-wellbeing-about-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .health-wellbeing-about-copy p {
+    text-align: left;
+  }
+
+  .health-wellbeing-about-image-frame {
+    height: min(100vw, 420px);
+    min-height: 300px;
+    border-top-right-radius: 64px;
+  }
+
+  .health-wellbeing-about-visual::before {
+    border-top-right-radius: 64px;
+  }
+
+  .health-wellbeing-about-visual figcaption {
+    margin-left: 4px;
+  }
+
+  .health-wellbeing-overview {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-overview-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-overview-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .health-wellbeing-benefits {
+    gap: 9px;
+  }
+
+  .health-wellbeing-benefits li {
+    min-height: 70px;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 13px;
+    padding: 12px;
+  }
+
+  .health-wellbeing-benefit-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .health-wellbeing-overview-art {
+    min-height: 380px;
+    border-radius: 100px 18px 100px 18px;
+  }
+
+  .health-wellbeing-overview-art::before {
+    border-radius: 90px 12px 90px 12px;
+  }
+
+  .health-wellbeing-art-orbit {
+    width: 260px;
+    height: 260px;
+  }
+
+  .health-wellbeing-family-art {
+    width: min(83%, 320px);
+  }
+
+  .health-wellbeing-art-caption {
+    right: 15px;
+    bottom: 15px;
+    padding: 10px 12px;
+  }
+
+  .health-wellbeing-importance {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-importance-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-importance-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .health-wellbeing-importance-card,
+  .health-wellbeing-importance-card:last-child {
+    min-height: 0;
+    grid-column: auto;
+    padding: 21px;
+  }
+
+  .health-wellbeing-importance-card h3 {
+    margin-top: 17px;
+  }
+
+  .health-wellbeing-learning {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-learning-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-learning-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .health-wellbeing-learning-card,
+  .health-wellbeing-learning-card-wide {
+    width: 100%;
+    grid-column: auto;
+    justify-self: stretch;
+    padding: 23px;
+  }
+
+  .health-wellbeing-expect {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-expect-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-expect-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .health-wellbeing-expect-card {
+    min-height: 0;
+    padding: 23px;
+  }
+
+  .health-wellbeing-expect-rule {
+    right: 23px;
+    left: 23px;
+  }
+
+  .health-wellbeing-audience {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-audience-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-audience-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .health-wellbeing-audience-note {
+    position: relative;
+    top: auto;
+    min-height: 230px;
+    padding: 25px;
+  }
+
+  .health-wellbeing-audience-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .health-wellbeing-audience-list li {
+    min-height: 96px;
+    grid-template-columns: 28px 40px minmax(0, 1fr) 16px;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .health-wellbeing-audience-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .health-wellbeing-join {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-join-heading {
+    margin-bottom: 32px;
+  }
+
+  .health-wellbeing-join-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .health-wellbeing-join-card {
+    min-height: 175px;
+    padding: 20px 21px 24px;
+  }
+
+  .health-wellbeing-join-card p {
+    margin-top: 20px;
+  }
+
+  .health-wellbeing-confidence {
+    padding: 68px 20px;
+  }
+
+  .health-wellbeing-confidence-heading {
+    margin-bottom: 28px;
+  }
+
+  .health-wellbeing-confidence-card {
+    padding: 34px 22px 25px 26px;
+    border-radius: 20px 20px 20px 5px;
+  }
+
+  .health-wellbeing-confidence-mark {
+    top: 0;
+    right: 12px;
+    font-size: 130px;
+  }
+
+  .health-wellbeing-confidence-quotes {
+    gap: 21px;
+  }
+
+  .health-wellbeing-confidence-quotes blockquote {
+    gap: 14px;
+  }
+
+  .health-wellbeing-confidence-quotes p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .health-wellbeing-confidence-signoff {
+    margin: 24px 0 0 19px;
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+}
+
+@media (max-width: 420px) {
+  .health-wellbeing-hero {
+    min-height: 300px;
+    padding: 36px 18px;
+  }
+
+  .health-wellbeing-hero h1 {
+    font-size: clamp(32px, 9vw, 38px);
+  }
+
+  .health-wellbeing-hero p {
+    font-size: 16px;
+  }
+
+  .health-wellbeing-about {
+    padding: 52px 18px;
+  }
+
+  .health-wellbeing-about-eyebrow {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .health-wellbeing-about-copy h2 {
+    font-size: clamp(34px, 9vw, 38px);
+  }
+
+  .health-wellbeing-about-image-frame {
+    height: 300px;
+    min-height: 0;
+  }
+
+  .health-wellbeing-about-image-note {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    padding: 9px 11px;
+    font-size: 9px;
+    letter-spacing: .08em;
+  }
+
+  .health-wellbeing-overview,
+  .health-wellbeing-importance,
+  .health-wellbeing-learning,
+  .health-wellbeing-expect,
+  .health-wellbeing-audience,
+  .health-wellbeing-join,
+  .health-wellbeing-confidence {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .health-wellbeing-overview-heading h2,
+  .health-wellbeing-importance-heading h2,
+  .health-wellbeing-learning-heading h2,
+  .health-wellbeing-expect-heading h2,
+  .health-wellbeing-audience-heading h2,
+  .health-wellbeing-join-heading h2,
+  .health-wellbeing-confidence-heading h2 {
+    font-size: clamp(31px, 8.5vw, 36px);
+  }
+
+  .health-wellbeing-overview-eyebrow,
+  .health-wellbeing-importance-eyebrow,
+  .health-wellbeing-learning-eyebrow,
+  .health-wellbeing-expect-eyebrow,
+  .health-wellbeing-audience-eyebrow,
+  .health-wellbeing-join-eyebrow,
+  .health-wellbeing-confidence-eyebrow {
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+
+  .health-wellbeing-overview-art {
+    min-height: 320px;
+  }
+
+  .health-wellbeing-art-caption {
+    right: 10px;
+    bottom: 10px;
+    gap: 8px;
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .health-wellbeing-benefits li {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .health-wellbeing-benefit-number {
+    width: 34px;
+    height: 34px;
+  }
+
+  .health-wellbeing-learning-card,
+  .health-wellbeing-learning-card-wide,
+  .health-wellbeing-expect-card,
+  .health-wellbeing-join-card {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  .health-wellbeing-audience-list li {
+    grid-template-columns: 25px 36px minmax(0, 1fr) 14px;
+    gap: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .health-wellbeing-audience-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .health-wellbeing-audience-copy strong {
+    font-size: 14px;
+  }
+
+  .health-wellbeing-confidence-card {
+    padding-right: 17px;
+    padding-left: 22px;
+  }
+
+  .health-wellbeing-confidence-quotes blockquote {
+    grid-template-columns: 4px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .health-wellbeing-confidence-signoff {
+    margin-left: 15px;
+    font-size: 8px;
+    letter-spacing: .08em;
+  }
+}
