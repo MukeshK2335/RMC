@@ -27,6 +27,15 @@
         </div>
         <a href="gallery.html">GALLERY</a>
         <a href="awards.html">AWARDS</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="sponsors-submenu">
+            <span>SPONSORS</span>
+          </button>
+          <div class="nav-dropdown-menu" id="sponsors-submenu">
+            <a href="become-sponsor.html">BECOME A SPONSOR</a>
+            <a href="sponsors.html">SPONSORS 2026</a>
+          </div>
+        </div>
       </nav>
     </header>
   `;
@@ -65,13 +74,16 @@
 
   if (!menuToggle || !siteNavigation) return;
 
-  const dropdownToggle = siteNavigation.querySelector('.nav-dropdown-toggle');
-  const dropdownMenu = siteNavigation.querySelector('.nav-dropdown-menu');
+  const dropdowns = [...siteNavigation.querySelectorAll('.nav-dropdown')];
 
   const closeDropdown = () => {
-    if (!dropdownToggle || !dropdownMenu) return;
-    dropdownMenu.classList.remove('is-open');
-    dropdownToggle.setAttribute('aria-expanded', 'false');
+    dropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      const menu = dropdown.querySelector('.nav-dropdown-menu');
+      if (!toggle || !menu) return;
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   };
 
   const closeNavigation = () => {
@@ -88,13 +100,17 @@
     menuToggle.setAttribute('aria-label', isOpening ? 'Close navigation menu' : 'Open navigation menu');
   });
 
-  if (dropdownToggle && dropdownMenu) {
+  dropdowns.forEach((dropdown) => {
+    const dropdownToggle = dropdown.querySelector('.nav-dropdown-toggle');
+    const dropdownMenu = dropdown.querySelector('.nav-dropdown-menu');
+    if (!dropdownToggle || !dropdownMenu) return;
+
     dropdownToggle.addEventListener('click', (e) => {
       e.stopPropagation(); // Prevent immediate closing if clicking the toggle
       const isOpen = dropdownMenu.classList.toggle('is-open');
       dropdownToggle.setAttribute('aria-expanded', String(isOpen));
     });
-  }
+  });
 
   siteNavigation.addEventListener('click', (event) => {
     if (event.target instanceof HTMLAnchorElement) closeNavigation();
