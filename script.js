@@ -275,8 +275,12 @@ const testimonialSlides = [...document.querySelectorAll(".testimonial-card")];
 if (testimonialCarousel && testimonialTrack && testimonialSlides.length) {
   let activeTestimonial = 0;
 
+  function getVisibleTestimonialCount() {
+    return window.matchMedia("(max-width: 600px)").matches ? 1 : Math.min(2, testimonialSlides.length);
+  }
+
   function showTestimonial(index) {
-    const visibleCount = Math.min(2, testimonialSlides.length);
+    const visibleCount = getVisibleTestimonialCount();
     const pageCount = Math.ceil(testimonialSlides.length / visibleCount);
     const page = ((Math.floor(index / visibleCount) % pageCount) + pageCount) % pageCount;
     activeTestimonial = page * visibleCount;
@@ -290,16 +294,17 @@ if (testimonialCarousel && testimonialTrack && testimonialSlides.length) {
 
   document.querySelectorAll("[data-testimonial-direction]").forEach((button) => {
     button.addEventListener("click", () => {
-      showTestimonial(activeTestimonial + Number(button.dataset.testimonialDirection) * 2);
+      showTestimonial(activeTestimonial + Number(button.dataset.testimonialDirection) * getVisibleTestimonialCount());
     });
   });
 
   showTestimonial(activeTestimonial);
+  window.addEventListener("resize", () => showTestimonial(activeTestimonial));
 
   if (testimonialSlides.length > 1 && !reducedMotion.matches) {
     window.setInterval(() => {
       if (!testimonialCarousel.matches(":hover, :focus-within") && !document.hidden) {
-        showTestimonial(activeTestimonial + 2);
+        showTestimonial(activeTestimonial + getVisibleTestimonialCount());
       }
     }, 6_000);
   }
