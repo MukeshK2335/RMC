@@ -22,8 +22,10 @@
             <a href="index.html#tracks">INNOVATION CHALLENGE</a>
             <a href="index.html#tracks">JUNIOR EINSTEIN</a>
             <a href="index.html#tracks">MAKER FAIR</a>
+            
           </div>
         </div>
+        <a href="gallery.html">GALLERY</a>
         <a href="award.html">AWARDS</a>
       </nav>
     </header>

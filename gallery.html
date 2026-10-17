@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | IEEE Returning Mothers Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div data-site-header></div>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="gallery-hero-bg">
+                <img src="Home Page Images/Hero Originals/DSC06038-1-scaled.jpg" alt="Gallery Hero Background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="eyebrow eyebrow-light"><span></span> Capturing Memories</p>
+                    <h1>Moments of <em>Innovation & Connection</em></h1>
+                    <p class="hero-subtitle">Relive the highlights, speakers, and networking sessions from our past conferences across the years.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="2025">2025</button>
+                    <button class="filter-btn" data-filter="2024">2024</button>
+                    <button class="filter-btn" data-filter="2023">2023</button>
+                    <button class="filter-btn" data-filter="2022">2022</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-grid-section">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Images will be injected by gallery.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryGrid = document.getElementById('gallery-grid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            let galleryData = {};
+
+            async function initGallery() {
+                try {
+                    const response = await fetch('gallery.json');
+                    if (!response.ok) throw new Error('Failed to fetch gallery data');
+                    galleryData = await response.json();
+                    renderGallery('all');
+                    setupFilters();
+                } catch (error) {
+                    console.error('Error loading gallery:', error);
+                    galleryGrid.innerHTML = '<p class="error-message">Unable to load gallery photos. Please try again later.</p>';
+                }
+            }
+
+            function renderGallery(filter = 'all') {
+                galleryGrid.innerHTML = '';
+                let displayItems = [];
+
+                if (filter === 'all') {
+                    Object.keys(galleryData).forEach(year => {
+                        galleryData[year].forEach(src => {
+                            displayItems.push({ year, src });
+                        });
+                    });
+                    // Optional: Shuffle "all" view for a dynamic feel
+                    displayItems.sort(() => Math.random() - 0.5);
+                } else if (galleryData[filter]) {
+                    galleryData[filter].forEach(src => {
+                        displayItems.push({ year: filter, src });
+                    });
+                }
+
+                displayItems.forEach((item, index) => {
+                    const galleryItem = document.createElement('div');
+                    
+                    // Assign bento types based on index for a unique layout
+                    const types = ['normal', 'wide', 'normal', 'tall', 'normal', 'large', 'normal', 'wide'];
+                    const type = types[index % types.length];
+                    
+                    galleryItem.className = `gallery-item ${type}`;
+                    galleryItem.dataset.year = item.year;
+                    
+                    galleryItem.innerHTML = `
+                        <img src="${item.src}" alt="Conference photo ${item.year}" loading="lazy" onerror="this.src='https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional+conference+event+photography+mothers+working&image_size=square'">
+                        <div class="item-info">
+                            <span>${item.year}</span>
+                        </div>
+                    `;
+                    
+                    galleryGrid.appendChild(galleryItem);
+                    
+                    setTimeout(() => {
+                        galleryItem.classList.add('show');
+                    }, index * 30);
+                });
+            }
+
+            function setupFilters() {
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        renderGallery(btn.dataset.filter);
+                    });
+                });
+            }
+
+            initGallery();
+        });
+    </script>
+</body>
+</html>
