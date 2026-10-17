@@ -15,6 +15,11 @@ body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
+.back-to-top { position: fixed; z-index: 30; right: 30px; bottom: 30px; display: grid; width: 62px; height: 62px; place-items: center; padding: 0; border: 0; border-radius: 50%; color: #fff; background: #28b889; box-shadow: 0 8px 18px rgba(16, 75, 63, .22); cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.back-to-top[hidden] { display: none; }
+.back-to-top:hover { transform: translateY(-3px); background: #179c77; box-shadow: 0 12px 24px rgba(16, 75, 63, .28); }
+.back-to-top:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.back-to-top svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; }
 .announcement { display: flex; justify-content: center; gap: 13px; padding: 8px 20px; color: #fff; background: var(--deep-teal); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .announcement-divider { color: var(--gold); }
 .site-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; min-height: 106px; padding: 12px max(1.4vw, 24px); border-bottom: 1px solid #e8ebeb; background: #fff; }
@@ -667,6 +672,7 @@ h2 em { color: var(--teal); font-style: normal; }
 }
 
 @media (max-width: 600px) {
+  .back-to-top { right: 20px; bottom: 20px; width: 54px; height: 54px; }
   .announcement { gap: 7px; padding: 8px 10px; font-size: 8px; letter-spacing: .04em; }
   .announcement span:first-child { display: none; }
   .site-header { padding-right: 19px; padding-left: 19px; }

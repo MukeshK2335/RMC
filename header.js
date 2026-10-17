@@ -37,6 +37,30 @@
     mount.outerHTML = headerHTML;
   }
 
+  const backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.type = 'button';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.title = 'Back to top';
+  backToTop.hidden = true;
+  backToTop.innerHTML = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 19V5m-7 7 7-7 7 7" />
+    </svg>
+  `;
+  document.body.appendChild(backToTop);
+
+  const updateBackToTopVisibility = () => {
+    backToTop.hidden = window.scrollY < 320;
+  };
+
+  window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+  updateBackToTopVisibility();
+  backToTop.addEventListener('click', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+
   const menuToggle = document.querySelector('.menu-toggle');
   const siteNavigation = document.querySelector('#site-navigation');
 
