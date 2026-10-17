@@ -21,6 +21,7 @@
           </button>
           <div class="nav-dropdown-menu" id="tracks-submenu">
             <a href="health-and-wellbeing.html">HEALTH &amp; WELL-BEING</a>
+            <a href="reskilling-upskilling.html">RESKILLING &amp; UPSKILLING</a>
           </div>
         </div>
         <a href="gallery.html">GALLERY</a>

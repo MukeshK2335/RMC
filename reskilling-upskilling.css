@@ -1,0 +1,2073 @@
+.reskilling-upskilling-page {
+  min-height: 100vh;
+  background: #fbfaf7;
+}
+
+.reskilling-upskilling-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(320px, 28vw, 430px);
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 48px 24px;
+  color: #fff;
+  background: #26363c url("images/RU.webp") center / cover no-repeat;
+}
+
+.reskilling-upskilling-hero-shade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+}
+
+.reskilling-upskilling-hero-content {
+  width: min(1200px, 100%);
+  text-align: center;
+}
+
+.reskilling-upskilling-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.2vw, 72px);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.reskilling-upskilling-hero p {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: clamp(17px, 1.45vw, 26px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.4;
+}
+
+.reskilling-about {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 112px) 24px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 88% 12%, rgba(106, 186, 145, .2), transparent 31%),
+    radial-gradient(ellipse at 4% 100%, rgba(3, 48, 58, .52), transparent 43%),
+    #086568;
+}
+
+.reskilling-about::before,
+.reskilling-about::after {
+  position: absolute;
+  border: 1px solid rgba(228, 203, 143, .22);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-about::before {
+  top: -190px;
+  right: -100px;
+  width: 470px;
+  height: 470px;
+}
+
+.reskilling-about::after {
+  top: -155px;
+  right: -65px;
+  width: 400px;
+  height: 400px;
+}
+
+.reskilling-about-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(1300px, 100%);
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .82fr);
+  align-items: center;
+  gap: clamp(52px, 8vw, 112px);
+  margin: 0 auto;
+}
+
+.reskilling-about-copy {
+  max-width: 730px;
+}
+
+.reskilling-about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 23px;
+  color: #e7d39d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+
+.reskilling-about-eyebrow span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(231, 211, 157, .6);
+  border-radius: 50%;
+  font-size: 10px;
+  letter-spacing: .04em;
+}
+
+.reskilling-about-copy h2 {
+  max-width: 620px;
+  margin: 0 0 26px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.reskilling-about-copy h2 em {
+  color: #e7d39d;
+  font-style: normal;
+}
+
+.reskilling-about-copy > p:not(.reskilling-about-eyebrow) {
+  margin: 0;
+  color: rgba(255, 255, 255, .96);
+  font-size: clamp(16px, 1.05vw, 18px);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.reskilling-about-copy > p:not(.reskilling-about-eyebrow) + p {
+  margin-top: 20px;
+}
+
+.reskilling-about-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 27px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reskilling-about-pillars li {
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reskilling-about-visual {
+  position: relative;
+  margin: 0;
+  padding: 0 0 18px 18px;
+}
+
+.reskilling-about-visual::before {
+  position: absolute;
+  inset: 22px 18px 39px 0;
+  border: 1px solid rgba(231, 211, 157, .68);
+  border-radius: 18px 80px 18px 18px;
+  content: "";
+  transform: rotate(-3deg);
+}
+
+.reskilling-about-image-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 300px;
+  place-items: center;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, .88);
+  border-radius: 18px 80px 18px 18px;
+  background: #477b61;
+  box-shadow: 0 26px 60px rgba(0, 34, 39, .34);
+}
+
+.reskilling-about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.reskilling-about-image-note {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  padding: 11px 15px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 999px;
+  color: #174c45;
+  background: rgba(255, 255, 255, .92);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.reskilling-about-visual figcaption {
+  position: relative;
+  z-index: 1;
+  margin: 17px 0 0 12px;
+  color: rgba(255, 255, 255, .83);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.reskilling-overview {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(70px, 8vw, 108px) 24px;
+  color: #203d37;
+  background:
+    radial-gradient(ellipse at 100% 100%, rgba(187, 204, 142, .28), transparent 36%),
+    #f3f5ed;
+}
+
+.reskilling-overview::before {
+  position: absolute;
+  top: -170px;
+  left: -130px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(49, 93, 72, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(49, 93, 72, .035), 0 0 0 68px rgba(49, 93, 72, .025);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-overview-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-overview-heading {
+  max-width: 800px;
+  margin: 0 auto clamp(38px, 5vw, 60px);
+  text-align: center;
+}
+
+.reskilling-overview-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #567448;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-overview-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #b69446;
+}
+
+.reskilling-overview-heading h2 {
+  margin: 0;
+  color: #203d37;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.reskilling-overview-heading h2 em {
+  color: #63824c;
+  font-style: normal;
+}
+
+.reskilling-overview-heading > p:last-child {
+  max-width: 590px;
+  margin: 16px auto 0;
+  color: #586b61;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-overview-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(360px, .96fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 92px);
+}
+
+.reskilling-overview-points {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reskilling-overview-points li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  padding: 17px 19px;
+  border: 1px solid rgba(54, 86, 66, .11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .77);
+  box-shadow: 0 7px 22px rgba(49, 74, 56, .045);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.reskilling-overview-points li:hover {
+  transform: translateX(4px);
+  border-color: rgba(99, 130, 76, .35);
+  box-shadow: 0 12px 26px rgba(49, 74, 56, .09);
+}
+
+.reskilling-overview-number {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  color: #fff;
+  background: #63824c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.reskilling-overview-points p {
+  margin: 2px 0 0;
+  color: #34483f;
+  font-size: clamp(15px, 1.08vw, 17px);
+  line-height: 1.6;
+}
+
+.reskilling-overview-visual {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 14px;
+}
+
+.reskilling-overview-visual::before {
+  position: absolute;
+  inset: 16px -14px -14px 0;
+  border: 1px solid rgba(182, 148, 70, .68);
+  border-radius: 22px;
+  content: "";
+  transform: rotate(2deg);
+}
+
+.reskilling-overview-image-frame {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 8px solid #fff;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 22px 55px rgba(43, 68, 51, .16);
+}
+
+.reskilling-overview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reskilling-overview-visual figcaption {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 24px 0 0 10px;
+  color: #456447;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reskilling-overview-visual figcaption span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #63824c;
+}
+
+.reskilling-importance {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 110px) 24px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 0 100%, rgba(105, 145, 91, .18), transparent 36%),
+    radial-gradient(ellipse at 100% 0, rgba(185, 151, 76, .12), transparent 34%),
+    #153f3b;
+}
+
+.reskilling-importance::before,
+.reskilling-importance::after {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(233, 215, 166, .13);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-importance::before {
+  top: -205px;
+  right: 9%;
+  box-shadow: 0 0 0 28px rgba(233, 215, 166, .035), 0 0 0 56px rgba(233, 215, 166, .025);
+}
+
+.reskilling-importance::after {
+  bottom: -230px;
+  left: -120px;
+  width: 360px;
+  height: 360px;
+}
+
+.reskilling-importance-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-importance-heading {
+  max-width: 780px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.reskilling-importance-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 17px;
+  color: #e4d29a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-importance-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #d0b66c;
+}
+
+.reskilling-importance-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.reskilling-importance-heading h2 em {
+  color: #e4d29a;
+  font-style: normal;
+}
+
+.reskilling-importance-heading > p:last-child {
+  max-width: 610px;
+  margin: 17px auto 0;
+  color: rgba(255, 255, 255, .78);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-importance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.reskilling-importance-card {
+  position: relative;
+  min-height: 205px;
+  overflow: hidden;
+  padding: 25px 24px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .065);
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.reskilling-importance-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(228, 210, 154, .52);
+  background: rgba(255, 255, 255, .1);
+}
+
+.reskilling-importance-card-featured {
+  grid-column: span 2;
+  min-height: 250px;
+  padding: 30px 34px;
+  border-color: rgba(228, 210, 154, .42);
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(228, 210, 154, .15), transparent 45%),
+    rgba(255, 255, 255, .09);
+}
+
+.reskilling-importance-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #e4d29a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.reskilling-importance-number span {
+  padding-left: 12px;
+  border-left: 1px solid rgba(228, 210, 154, .45);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+
+.reskilling-importance-card h3 {
+  max-width: 290px;
+  margin: 17px 0 10px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.2;
+}
+
+.reskilling-importance-card-featured h3 {
+  max-width: 450px;
+  margin-top: 19px;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.reskilling-importance-card p {
+  max-width: 380px;
+  margin: 0;
+  color: rgba(255, 255, 255, .77);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.reskilling-importance-card-featured p {
+  max-width: 560px;
+  font-size: 16px;
+}
+
+.reskilling-importance-card-mark {
+  position: absolute;
+  right: 28px;
+  bottom: 23px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(228, 210, 154, .5);
+  border-radius: 50%;
+  color: #e4d29a;
+  font-size: 20px;
+}
+
+.reskilling-importance-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: 34px 0 0;
+  color: rgba(255, 255, 255, .84);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reskilling-importance-footer span {
+  color: #e4d29a;
+  font-size: 18px;
+}
+
+.reskilling-pathways {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 108px) 24px;
+  color: #263c3b;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(111, 171, 149, .16), transparent 34%),
+    #f5f8f7;
+}
+
+.reskilling-pathways::before {
+  position: absolute;
+  right: -135px;
+  bottom: -210px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(9, 113, 108, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(9, 113, 108, .035), 0 0 0 68px rgba(9, 113, 108, .025);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-pathways-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-pathways-heading {
+  max-width: 780px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.reskilling-pathways-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #087873;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-pathways-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #c09b4f;
+}
+
+.reskilling-pathways-heading h2 {
+  margin: 0;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: clamp(35px, 4.2vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-wrap: balance;
+  text-transform: capitalize;
+}
+
+.reskilling-pathways-heading h2 em {
+  color: #07827c;
+  font-style: normal;
+}
+
+.reskilling-pathways-heading > p:last-child {
+  max-width: 610px;
+  margin: 16px auto 0;
+  color: #5b6d68;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.reskilling-pathway-card {
+  position: relative;
+  display: grid;
+  min-height: 150px;
+  grid-template-columns: 46px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  padding: 24px 26px;
+  border: 1px solid rgba(33, 80, 73, .09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 12px 30px rgba(31, 65, 59, .07);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.reskilling-pathway-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #087873, #19aaa0);
+  content: "";
+}
+
+.reskilling-pathway-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 120, 115, .34);
+  box-shadow: 0 18px 38px rgba(31, 65, 59, .13);
+}
+
+.reskilling-pathway-number {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(8, 120, 115, .19);
+  border-radius: 14px;
+  color: #087873;
+  background: #edf7f4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  transition: color .22s ease, background-color .22s ease, border-color .22s ease;
+}
+
+.reskilling-pathway-card:hover .reskilling-pathway-number {
+  border-color: #087873;
+  color: #fff;
+  background: #087873;
+}
+
+.reskilling-pathway-card h3 {
+  margin: 0 0 7px;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.55vw, 20px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.25;
+}
+
+.reskilling-pathway-card p {
+  margin: 0;
+  color: #5b6d68;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reskilling-pathway-arrow {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(8, 120, 115, .18);
+  border-radius: 50%;
+  color: #087873;
+  font-size: 17px;
+  transition: transform .22s ease, color .22s ease, background-color .22s ease;
+}
+
+.reskilling-pathway-card:hover .reskilling-pathway-arrow {
+  transform: translate(2px, -2px);
+  color: #fff;
+  background: #087873;
+}
+
+.reskilling-pathways-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 34px 0 0;
+  color: #47645c;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reskilling-pathways-footer span {
+  color: #b18d42;
+  font-size: 18px;
+}
+
+.reskilling-expect {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 110px) 24px;
+  color: #263b3b;
+  background:
+    radial-gradient(ellipse at 0 0, rgba(213, 184, 125, .15), transparent 36%),
+    #fbf8f1;
+}
+
+.reskilling-expect::before {
+  position: absolute;
+  top: -190px;
+  right: -115px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(8, 120, 115, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(8, 120, 115, .03), 0 0 0 68px rgba(8, 120, 115, .02);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-expect-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-expect-heading {
+  max-width: 790px;
+  margin: 0 auto clamp(38px, 5vw, 58px);
+  text-align: center;
+}
+
+.reskilling-expect-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #087873;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-expect-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #bd984c;
+}
+
+.reskilling-expect-heading h2 {
+  margin: 0;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.3vw, 56px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.reskilling-expect-heading h2 em {
+  color: #087873;
+  font-style: normal;
+}
+
+.reskilling-expect-heading > p:last-child {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: #5b6d68;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-expect-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.8fr);
+  align-items: stretch;
+  gap: 24px;
+}
+
+.reskilling-expect-note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 22px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(231, 211, 157, .2), transparent 44%),
+    linear-gradient(145deg, #087873, #15524c 76%);
+  box-shadow: 0 18px 40px rgba(27, 76, 68, .16);
+}
+
+.reskilling-expect-note-mark {
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  color: rgba(231, 211, 157, .76);
+  font-family: Georgia, serif;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.reskilling-expect-note > p {
+  position: relative;
+  margin: 100px 0 25px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.4;
+}
+
+.reskilling-expect-note-label {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, .32);
+  color: #f0dda6;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.6;
+}
+
+.reskilling-expect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: 13px;
+}
+
+.reskilling-expect-card {
+  display: grid;
+  min-height: 144px;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-content: start;
+  gap: 15px;
+  padding: 21px 19px;
+  border: 1px solid rgba(45, 77, 69, .1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .86);
+  box-shadow: 0 8px 22px rgba(51, 67, 57, .055);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.reskilling-expect-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(8, 120, 115, .32);
+  box-shadow: 0 14px 28px rgba(51, 67, 57, .1);
+}
+
+.reskilling-expect-number {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  color: #087873;
+  background: #e7f2ed;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.reskilling-expect-card h3 {
+  margin: 2px 0 7px;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+
+.reskilling-expect-card p {
+  margin: 0;
+  color: #5b6d68;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.reskilling-audience {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 110px) 24px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 95% 100%, rgba(116, 166, 133, .2), transparent 38%),
+    radial-gradient(ellipse at 0 0, rgba(202, 167, 91, .1), transparent 34%),
+    #124a49;
+}
+
+.reskilling-audience::before {
+  position: absolute;
+  right: -170px;
+  bottom: -225px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(235, 218, 170, .15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(235, 218, 170, .035), 0 0 0 68px rgba(235, 218, 170, .025);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-audience-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-audience-heading {
+  max-width: 780px;
+  margin: 0 auto clamp(38px, 5vw, 58px);
+  text-align: center;
+}
+
+.reskilling-audience-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #ead9a7;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-audience-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #d2b76f;
+}
+
+.reskilling-audience-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.3vw, 56px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.reskilling-audience-heading h2 em {
+  color: #ead9a7;
+  font-style: normal;
+}
+
+.reskilling-audience-heading > p:last-child {
+  max-width: 610px;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, .78);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-audience-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: clamp(32px, 6vw, 76px);
+}
+
+.reskilling-audience-intro {
+  position: sticky;
+  top: 28px;
+  overflow: hidden;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .075);
+}
+
+.reskilling-audience-orbit {
+  display: inline-grid;
+  min-width: 74px;
+  height: 74px;
+  place-items: center;
+  border: 1px solid rgba(234, 217, 167, .7);
+  border-radius: 50%;
+  color: #ead9a7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  box-shadow: 0 0 0 9px rgba(234, 217, 167, .06);
+}
+
+.reskilling-audience-intro-quote {
+  margin: 32px 0 13px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.32;
+}
+
+.reskilling-audience-intro-quote strong {
+  color: #ead9a7;
+  font-weight: inherit;
+}
+
+.reskilling-audience-intro-note {
+  margin: 0;
+  color: rgba(255, 255, 255, .76);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.reskilling-audience-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reskilling-audience-list li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 68px;
+  padding: 13px 18px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .055);
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.reskilling-audience-list li:hover {
+  transform: translateX(4px);
+  border-color: rgba(234, 217, 167, .45);
+  background: rgba(255, 255, 255, .1);
+}
+
+.reskilling-audience-number {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 11px;
+  color: #163f3d;
+  background: #ead9a7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.reskilling-audience-list li > span:last-child {
+  color: rgba(255, 255, 255, .94);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.reskilling-join {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 110px) 24px;
+  color: #213d3a;
+  background:
+    radial-gradient(ellipse at 100% 100%, rgba(158, 191, 157, .2), transparent 38%),
+    #f2f6f1;
+}
+
+.reskilling-join::before {
+  position: absolute;
+  top: -205px;
+  left: -135px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(8, 120, 115, .13);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(8, 120, 115, .035), 0 0 0 68px rgba(8, 120, 115, .025);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-join-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-join-heading {
+  max-width: 780px;
+  margin: 0 auto clamp(38px, 5vw, 58px);
+  text-align: center;
+}
+
+.reskilling-join-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: #087873;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.reskilling-join-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #bd984c;
+}
+
+.reskilling-join-heading h2 {
+  margin: 0;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.3vw, 56px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.reskilling-join-heading h2 em {
+  color: #087873;
+  font-style: normal;
+}
+
+.reskilling-join-heading > p:last-child {
+  max-width: 610px;
+  margin: 16px auto 0;
+  color: #5b6d68;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.reskilling-join-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.reskilling-join-card {
+  position: relative;
+  min-height: 225px;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid rgba(41, 84, 72, .12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .83);
+  box-shadow: 0 10px 26px rgba(40, 66, 54, .06);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.reskilling-join-card::after {
+  position: absolute;
+  right: -28px;
+  bottom: -48px;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(8, 120, 115, .1);
+  border-radius: 50%;
+  content: "";
+  transition: transform .22s ease;
+}
+
+.reskilling-join-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 120, 115, .32);
+  box-shadow: 0 17px 34px rgba(40, 66, 54, .12);
+}
+
+.reskilling-join-card:hover::after {
+  transform: scale(1.25);
+}
+
+.reskilling-join-number {
+  position: absolute;
+  top: 24px;
+  right: 23px;
+  color: rgba(32, 61, 59, .34);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.reskilling-join-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(145deg, #0c8980, #17615b);
+  box-shadow: 0 8px 18px rgba(8, 120, 115, .2);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.reskilling-join-card h3 {
+  max-width: 260px;
+  margin: 19px 0 8px;
+  color: #203d3b;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.25;
+}
+
+.reskilling-join-card p {
+  max-width: 310px;
+  margin: 0;
+  color: #5b6d68;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reskilling-join-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 34px 0 0;
+  color: #45645b;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reskilling-join-footer span {
+  color: #b18d42;
+  font-size: 18px;
+}
+
+.reskilling-shared-future {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 8vw, 108px) 24px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 95% 100%, rgba(116, 166, 133, .2), transparent 38%),
+    radial-gradient(ellipse at 0 0, rgba(202, 167, 91, .1), transparent 34%),
+    #124a49;
+}
+
+.reskilling-shared-future::before {
+  position: absolute;
+  right: -170px;
+  bottom: -225px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(235, 218, 170, .15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(235, 218, 170, .035), 0 0 0 68px rgba(235, 218, 170, .025);
+  content: "";
+  pointer-events: none;
+}
+
+.reskilling-shared-future-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.reskilling-shared-future-heading {
+  margin: 0 0 34px;
+  text-align: center;
+}
+
+.reskilling-shared-future-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  color: #ead9a7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+
+.reskilling-shared-future-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #bd984c;
+}
+
+.reskilling-shared-future-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.reskilling-shared-future-heading h2 em {
+  color: #ead9a7;
+  font-style: normal;
+}
+
+.reskilling-shared-future-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(34px, 5.5vw, 66px) clamp(26px, 5vw, 62px) 32px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-left: 6px solid #d2b76f;
+  border-radius: 4px 24px 24px 4px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(116, 166, 133, .2), transparent 40%),
+    rgba(255, 255, 255, .075);
+  box-shadow: 0 20px 48px rgba(0, 30, 28, .16);
+}
+
+.reskilling-shared-future-quote-mark {
+  position: absolute;
+  top: -15px;
+  left: 22px;
+  color: rgba(234, 217, 167, .13);
+  font-family: Georgia, serif;
+  font-size: clamp(130px, 17vw, 210px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.reskilling-shared-future-copy {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.reskilling-shared-future-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, .88);
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.8;
+}
+
+.reskilling-shared-future-copy p + p {
+  margin-top: 22px;
+}
+
+.reskilling-shared-future-copy strong {
+  color: #ead9a7;
+  font-weight: 800;
+}
+
+.reskilling-shared-future-signoff {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, .19);
+}
+
+.reskilling-shared-future-signoff > span {
+  width: 30px;
+  height: 2px;
+  background: #bd984c;
+}
+
+.reskilling-shared-future-signoff p {
+  margin: 0;
+  color: #ead9a7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 700px) {
+  .reskilling-upskilling-hero {
+    min-height: 330px;
+    padding: 40px 20px;
+    background-position: center;
+  }
+
+  .reskilling-about {
+    padding: 64px 20px;
+  }
+
+  .reskilling-about-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .reskilling-about-copy > p:not(.reskilling-about-eyebrow) {
+    text-align: left;
+  }
+
+  .reskilling-about-image-frame {
+    min-height: 0;
+  }
+
+  .reskilling-about-visual::before {
+    border-top-right-radius: 64px;
+  }
+
+  .reskilling-about-visual figcaption {
+    margin-left: 4px;
+  }
+
+  .reskilling-overview {
+    padding: 62px 20px;
+  }
+
+  .reskilling-overview-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .reskilling-overview-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-importance {
+    padding: 62px 20px;
+  }
+
+  .reskilling-importance-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-importance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reskilling-importance-card-featured {
+    grid-column: span 2;
+  }
+
+  .reskilling-importance-card {
+    min-height: 190px;
+    padding: 21px 19px;
+  }
+
+  .reskilling-importance-card-featured {
+    min-height: 225px;
+    padding: 26px;
+  }
+
+  .reskilling-pathways {
+    padding: 62px 20px;
+  }
+
+  .reskilling-pathways-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-pathways-grid {
+    gap: 12px;
+  }
+
+  .reskilling-pathway-card {
+    min-height: 142px;
+    grid-template-columns: 40px minmax(0, 1fr) 28px;
+    gap: 13px;
+    padding: 21px 18px;
+  }
+
+  .reskilling-pathway-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .reskilling-pathway-card h3 {
+    font-size: 14px;
+  }
+
+  .reskilling-expect {
+    padding: 62px 20px;
+  }
+
+  .reskilling-expect-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-expect-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reskilling-expect-note {
+    min-height: 230px;
+    padding: 25px;
+  }
+
+  .reskilling-expect-note > p {
+    max-width: 470px;
+    margin: 80px 0 21px;
+    font-size: 23px;
+  }
+
+  .reskilling-audience {
+    padding: 62px 20px;
+  }
+
+  .reskilling-audience-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-audience-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .reskilling-audience-intro {
+    position: relative;
+    top: auto;
+    padding: 25px;
+  }
+
+  .reskilling-audience-intro-quote {
+    max-width: 500px;
+    margin-top: 27px;
+    font-size: 25px;
+  }
+
+  .reskilling-join {
+    padding: 62px 20px;
+  }
+
+  .reskilling-join-heading {
+    margin-bottom: 34px;
+  }
+
+  .reskilling-join-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .reskilling-join-card {
+    min-height: 210px;
+    padding: 21px;
+  }
+
+  .reskilling-shared-future {
+    padding: 62px 20px;
+  }
+
+  .reskilling-shared-future-heading {
+    margin-bottom: 28px;
+  }
+
+  .reskilling-shared-future-panel {
+    padding: 44px 26px 26px;
+  }
+
+  .reskilling-shared-future-copy p + p {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .reskilling-upskilling-hero {
+    min-height: 300px;
+    padding: 36px 18px;
+  }
+
+  .reskilling-upskilling-hero h1 {
+    font-size: clamp(32px, 9vw, 38px);
+  }
+
+  .reskilling-upskilling-hero p {
+    font-size: 16px;
+  }
+
+  .reskilling-about {
+    padding: 52px 18px;
+  }
+
+  .reskilling-about-eyebrow {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-about-copy h2 {
+    font-size: clamp(34px, 9vw, 38px);
+  }
+
+  .reskilling-about-image-note {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    padding: 9px 11px;
+    font-size: 9px;
+    letter-spacing: .08em;
+  }
+
+  .reskilling-overview {
+    padding: 52px 18px;
+  }
+
+  .reskilling-overview-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-overview-heading h2 {
+    font-size: clamp(31px, 8.5vw, 36px);
+  }
+
+  .reskilling-overview-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-overview-points {
+    gap: 9px;
+  }
+
+  .reskilling-overview-points li {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  .reskilling-overview-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 9px;
+  }
+
+  .reskilling-overview-points p {
+    font-size: 14px;
+  }
+
+  .reskilling-overview-visual {
+    padding-left: 8px;
+  }
+
+  .reskilling-overview-visual figcaption {
+    margin-left: 2px;
+    font-size: 12px;
+  }
+
+  .reskilling-importance {
+    padding: 52px 18px;
+  }
+
+  .reskilling-importance-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-importance-heading h2 {
+    font-size: clamp(31px, 8.5vw, 36px);
+  }
+
+  .reskilling-importance-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-importance-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reskilling-importance-card,
+  .reskilling-importance-card-featured {
+    grid-column: auto;
+    min-height: 0;
+    padding: 21px 19px;
+  }
+
+  .reskilling-importance-card-featured h3 {
+    font-size: 26px;
+  }
+
+  .reskilling-importance-card-featured p {
+    padding-right: 24px;
+    font-size: 14px;
+  }
+
+  .reskilling-importance-card-mark {
+    right: 17px;
+    bottom: 16px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .reskilling-importance-footer {
+    font-size: 12px;
+  }
+
+  .reskilling-pathways {
+    padding: 52px 18px;
+  }
+
+  .reskilling-pathways-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-pathways-heading h2 {
+    font-size: clamp(31px, 8.5vw, 36px);
+  }
+
+  .reskilling-pathways-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-pathways-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reskilling-pathway-card {
+    min-height: 124px;
+    grid-template-columns: 38px minmax(0, 1fr) 28px;
+    gap: 12px;
+    padding: 19px 15px;
+  }
+
+  .reskilling-pathway-card h3 {
+    font-size: 14px;
+  }
+
+  .reskilling-pathway-card {
+    grid-template-columns: 32px minmax(0, 1fr) 24px;
+    gap: 8px;
+    padding: 15px 11px;
+  }
+
+  .reskilling-pathway-card p {
+    font-size: 13px;
+  }
+
+  .reskilling-pathways-footer {
+    font-size: 12px;
+  }
+
+  .reskilling-expect {
+    padding: 52px 18px;
+  }
+
+  .reskilling-expect-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-expect-heading h2 {
+    font-size: clamp(32px, 8.5vw, 37px);
+  }
+
+  .reskilling-expect-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-expect-note {
+    min-height: 215px;
+    padding: 22px;
+  }
+
+  .reskilling-expect-note > p {
+    margin-top: 75px;
+    font-size: 21px;
+  }
+
+  .reskilling-expect-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reskilling-expect-card {
+    min-height: 0;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px 15px;
+  }
+
+  .reskilling-expect-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .reskilling-audience {
+    padding: 52px 18px;
+  }
+
+  .reskilling-audience-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-audience-heading h2 {
+    font-size: clamp(32px, 8.5vw, 37px);
+  }
+
+  .reskilling-audience-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-audience-intro {
+    padding: 21px;
+    border-radius: 18px;
+  }
+
+  .reskilling-audience-orbit {
+    min-width: 62px;
+    height: 62px;
+    font-size: 10px;
+  }
+
+  .reskilling-audience-intro-quote {
+    margin-top: 24px;
+    font-size: 22px;
+  }
+
+  .reskilling-audience-list {
+    gap: 8px;
+  }
+
+  .reskilling-audience-list li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 60px;
+    padding: 12px;
+  }
+
+  .reskilling-audience-number {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+  }
+
+  .reskilling-audience-list li > span:last-child {
+    font-size: 14px;
+  }
+
+  .reskilling-pathway-card h3 {
+    font-size: 16px;
+  }
+
+  .reskilling-join {
+    padding: 52px 18px;
+  }
+
+  .reskilling-join-eyebrow {
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .reskilling-join-heading h2 {
+    font-size: clamp(32px, 8.5vw, 37px);
+  }
+
+  .reskilling-join-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .reskilling-join-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reskilling-join-card {
+    min-height: 0;
+    padding: 19px;
+  }
+
+  .reskilling-join-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 20px;
+  }
+
+  .reskilling-join-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .reskilling-join-card p {
+    font-size: 13px;
+  }
+
+  .reskilling-join-footer {
+    font-size: 12px;
+  }
+
+  .reskilling-shared-future {
+    padding: 52px 18px;
+  }
+
+  .reskilling-shared-future-eyebrow {
+    font-size: 9px;
+    letter-spacing: .13em;
+  }
+
+  .reskilling-shared-future-heading h2 {
+    font-size: clamp(32px, 8.5vw, 37px);
+  }
+
+  .reskilling-shared-future-panel {
+    padding: 38px 18px 22px;
+    border-left-width: 4px;
+    border-radius: 3px 17px 17px 3px;
+  }
+
+  .reskilling-shared-future-quote-mark {
+    top: -8px;
+    left: 12px;
+    font-size: 132px;
+  }
+
+  .reskilling-shared-future-copy p {
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .reskilling-shared-future-copy p + p {
+    margin-top: 16px;
+  }
+
+  .reskilling-shared-future-signoff {
+    gap: 9px;
+    margin-top: 23px;
+    padding-top: 17px;
+  }
+
+  .reskilling-shared-future-signoff p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 850px) {
+  .reskilling-about-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .82fr);
+    gap: 34px;
+  }
+
+  .reskilling-overview-content {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr);
+    gap: 34px;
+  }
+
+  .reskilling-importance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .reskilling-expect-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .reskilling-expect-note {
+    min-height: 200px;
+  }
+}
